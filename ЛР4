@@ -1,0 +1,40 @@
+// Пример композиции
+
+// Класс двигателя
+class Engine {
+    public void start() {
+        System.out.println("Двигатель запущен");
+    }
+}
+
+// Класс автомобиля, использующий двигатель (композиция)
+class Car {
+    private Engine engine; // Ссылка на объект Engine
+
+    public Car() {
+        this.engine = new Engine(); // Создание объекта Engine в конструкторе Car
+    }
+
+    public void startCar() {
+        engine.start(); // Вызов метода start() объекта Engine
+    }
+}
+
+//В этом примере класс Car содержит объект класса Engine, и объект Engine создается внутри класса Car. Это демонстрирует композицию, где объект одного класса состоит из объекта другого класса.
+
+// Пример агрегации
+
+// Класс Департамента
+class Department {
+    // Реализация класса опущена для простоты примера
+}
+
+// Класс Университет, который имеет агрегацию с Департаментом
+class University {
+    private Department department; // Ссылка на объект Department
+
+    public University(Department department) {
+        this.department = department; // Передача объекта Department через конструктор University
+    }
+}
+//Здесь класс University имеет агрегацию с классом Department. Объект Department передается в University через конструктор. Агрегация указывает на отношение "содержит", при котором объект одного класса содержит или связан с объектом другого класса, но они могут существовать независимо.
