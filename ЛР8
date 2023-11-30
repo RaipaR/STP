@@ -3,15 +3,20 @@ public class BubbleSort {
         int[] array = {5, 2, 8, 12, 1, 7};
 
         System.out.println("Исходный массив:");
-        printArray(array);
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
 
         bubbleSort(array);
 
         System.out.println("Отсортированный массив:");
-        printArray(array);
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 
-    // Метод для сортировки массива методом пузырька
     public static void bubbleSort(int[] array) {
         int n = array.length;
         for (int i = 0; i < n - 1; i++) {
@@ -24,13 +29,5 @@ public class BubbleSort {
                 }
             }
         }
-    }
-
-    // Метод для вывода массива на экран
-    public static void printArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
     }
 }
